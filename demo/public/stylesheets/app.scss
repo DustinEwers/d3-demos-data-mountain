@@ -1,0 +1,28 @@
+
+$text_color: #212121;
+
+body {
+  padding: 5px;
+  font: 14px Helvetica, Arial, sans-serif;
+  color: $text_color;
+}
+
+a{
+  color: $text_color;
+}
+
+header > h1 > a {
+  outline: none;
+  text-decoration: none;
+  color: $text_color;
+}
+
+header > h1 > a:visited {
+  color: $text_color;
+}
+
+ul.unstyled{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
