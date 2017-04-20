@@ -1,9 +1,31 @@
 <!DOCTYPE html>
 <html>
-  <% include ./partials/head %>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/app.css' />
+    <link rel='stylesheet' href='/stylesheets/nv.d3.css' />
+
+    <script src="/javascripts/d3.v3.min.js" type="text/javascript" language="javascript"></script>
+    <script src="/javascripts/nv.d3.min.js" type="text/javascript" language="javascript"></script>
+    <script src="/javascripts/nvd3Demo.js" type="text/javascript" language="javascript"></script>
+  </head>
   <body>
-    <% include ./partials/header %>
-    <h2>NVD3 Examples</h3>
-    
+    <div class="container">
+        <% include ./partials/header %>
+        <h2 class="centerText">NVD3 Examples</h3>
+
+        <div class="space-bottom">
+            <h3 class="centerText">Global Poverty (in Millions) 1981 - 2013</h3>
+            <svg id="lineDemo" height="750"></svg>
+        </div>
+        <div class="space-bottom">
+            <h3 class="centerText">Global Poverty (in Millions) 1981 - 2013</h3>
+            <svg id="areaDemo" height="750"></svg>
+        </div>
+        <div>
+            <h3>Instances where pie charts are __________</h3>
+            <svg id="pieDemo" style="height:600px;width:500px"></svg>
+        </div>
+    </div>
   </body>
 </html>

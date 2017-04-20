@@ -1,12 +1,17 @@
 <!DOCTYPE html>
 <html>
-  <% include ./partials/head %>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/app.css' />
+</head>
   <body>
-    <% include ./partials/header %>
-    <h2>Demos</h3>
-    <ul class="unstyled">
-      <li><a href="/nvd3">NVD3 Examples</a></li>
-      <li><a href="/d3-simple">D3 - Simple Exmaple</a></li>
-    </ul>
+    <div class="container">
+      <% include ./partials/header %>
+      <h2>Demos</h3>
+      <ul class="unstyled">
+        <li><a href="/nvd3">NVD3 Examples</a></li>
+        <li><a href="/d3-simple">D3 - Simple Exmaple</a></li>
+      </ul>
+    </div>
   </body>
 </html>

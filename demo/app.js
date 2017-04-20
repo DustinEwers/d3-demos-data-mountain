@@ -8,7 +8,7 @@ var sassMiddleware = require('node-sass-middleware');
 
 var index = require('./routes/index');
 var nvd3 = require('./routes/nvd3');
-var d3Simple = require('./routes/d3_simple');
+var d3_simple = require('./routes/d3_simple');
 var nvd3 = require('./routes/nvd3');
 
 var app = express();
@@ -26,6 +26,7 @@ app.use(cookieParser());
 app.use(sassMiddleware({
   src: path.join(__dirname, 'public'),
   dest: path.join(__dirname, 'public'),
+  force:true,
   indentedSyntax: false, // true = .sass and false = .scss
   sourceMap: true
 }));
@@ -33,7 +34,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', index);
 app.use('/nvd3', nvd3);
-app.use('/d3-simple', d3Simple);
+app.use('/d3-simple', d3_simple);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
