@@ -10,6 +10,7 @@ var index = require('./routes/index');
 var nvd3 = require('./routes/nvd3');
 var d3_simple = require('./routes/d3_simple');
 var nvd3 = require('./routes/nvd3');
+var bouncy_ball = require('./routes/bouncy_ball');
 
 var app = express();
 
@@ -35,6 +36,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', index);
 app.use('/nvd3', nvd3);
 app.use('/d3-simple', d3_simple);
+app.use('/bouncy_ball', bouncy_ball);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

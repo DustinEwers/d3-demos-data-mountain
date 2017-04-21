@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <title><%= title %></title>
+      <link rel='stylesheet' href='/stylesheets/app.css' />
+      <link rel='stylesheet' href='/stylesheets/d3.css' />
+      <script src="/javascripts/d3.js" type="text/javascript" language="javascript"></script>
+
+      <style type="text/css">
+        circle {
+            stroke: #000;
+            stroke-opacity: .5;
+        }
+      </style>
+  </head>
+  <body>
+    <div class="container">
+        <% include ./partials/header %>
+        <h2>D3 Force Layout</h2>
+        <!-- Based on http://mbostock.github.io/d3/talk/20111018/collision.html -->
+        <div id="simulation">
+
+        </svg>
+    </div>
+    <script src="/javascripts/bouncy_ball.js" type="text/javascript" language="javascript"></script>
+  </body>
+</html>
