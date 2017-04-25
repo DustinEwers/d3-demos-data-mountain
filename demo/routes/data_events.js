@@ -3,7 +3,7 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('bouncy_ball', { title: 'Force Layout' });
+  res.render('data_events', { title: 'D3 - Data Events' });
 });
 
 module.exports = router;

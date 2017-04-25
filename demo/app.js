@@ -9,8 +9,8 @@ var sassMiddleware = require('node-sass-middleware');
 var index = require('./routes/index');
 var nvd3 = require('./routes/nvd3');
 var d3_simple = require('./routes/d3_simple');
-var nvd3 = require('./routes/nvd3');
-var bouncy_ball = require('./routes/bouncy_ball');
+var data_events = require('./routes/data_events');
+var force_layout = require('./routes/force_layout');
 
 var app = express();
 
@@ -18,8 +18,6 @@ var app = express();
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
-// uncomment after placing your favicon in /public
-//app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -36,7 +34,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', index);
 app.use('/nvd3', nvd3);
 app.use('/d3-simple', d3_simple);
-app.use('/bouncy_ball', bouncy_ball);
+app.use('/force_layout', force_layout);
+app.use('/data_events', data_events);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
