@@ -36,12 +36,9 @@ d3.csv("/data/world_poverty_in_millions.csv", function(data){
             .axisLabel('Poverty Level (in millions)')
             .tickFormat(d3.format('.02f'));
 
-
-
         d3.select('#lineDemo')    //Select the <svg> element you want to render the chart in.   
             .datum(lineData)         //Populate the <svg> element with chart data...
             .call(lineChart);          //Finally, render the chart!
-        
 
         nv.utils.windowResize(function() { lineChart.update() });
         return lineChart;
@@ -71,20 +68,16 @@ d3.csv("/data/world_poverty_in_millions.csv", function(data){
                 .showXAxis(true)        //Show the x-axis
                 .forceY([0, d3.max(vals, function(d){return d.y})]);
 
-        lineChart.xAxis     //Chart x-axis settings
-            .axisLabel('Year');
-            //.tickFormat(d3.time.format("%Y"));
+        lineChart.xAxis //Chart x-axis settings
+            .axisLabel('Year'); //.tickFormat(d3.time.format("%Y"));
 
         lineChart.yAxis     //Chart y-axis settings
             .axisLabel('Poverty Level (in millions)')
             .tickFormat(d3.format('.02f'));
 
-
-
-        d3.select('#areaDemo')    //Select the <svg> element you want to render the chart in.   
-            .datum(lineData)         //Populate the <svg> element with chart data...
-            .call(lineChart);          //Finally, render the chart!
-        
+        d3.select('#areaDemo')  //Select the <svg> element you want to render the chart in.   
+            .datum(lineData)    //Populate the <svg> element with chart data...
+            .call(lineChart);   //Finally, render the chart!
 
         nv.utils.windowResize(function() { lineChart.update() });
         return lineChart;

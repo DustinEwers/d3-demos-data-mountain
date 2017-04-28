@@ -4,7 +4,7 @@ var limit = 15;
 var width = 800;
 var height = 250;
 var index = 0;
-var tickTime = 1000;
+var tickTime = 750;
 var transitionTime = tickTime;
 
 function generateColor(){return d3.schemeCategory20[Math.floor(Math.random() * 10)]};
@@ -43,6 +43,8 @@ function bindData(){
 
     // data bind
     var circles = svg.selectAll("circle").data(nodes, function(d){return d.i});
+//    var circles = svg.selectAll("circle").data(nodes);
+
 
     // update
     circles
@@ -55,7 +57,7 @@ function bindData(){
             .append("circle")
             .style("opacity",0)
             .attr("r", function(d) { return d.r; })
-            .attr("cx", function(d){ return width + 20})
+            .attr("cx", function(d){ return width + 10})
             .attr("cy", function(d){ return height - d.height })
             .attr("fill", function(d) { return d.color; })
             .transition()

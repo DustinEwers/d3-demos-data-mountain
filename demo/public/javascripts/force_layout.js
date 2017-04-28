@@ -16,7 +16,7 @@ var sim = d3.forceSimulation()
             .nodes(nodes);
 
 sim.force("gravity", d3.forceManyBody().strength(function(d, i) { return 10; }))
-   .force("collide",d3.forceCollide( function(d){return d.radius + 3 }).iterations(20) )
+   .force("collide",d3.forceCollide( function(d){return d.radius + 1 }).iterations(20) )
    .force("center_force", d3.forceCenter(w / 2, h / 2));
 
 sim.alphaDecay(0);
